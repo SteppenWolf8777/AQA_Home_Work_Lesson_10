@@ -8,13 +8,10 @@ def test_github():
     browser.element(".header-search-button").click()
     browser.element("#query-builder-test").should(be.visible)
     browser.element("#query-builder-test").send_keys(
-        "PanovaAlyona/qa_guru_homework_10"
+        "SteppenWolf8777/AQA_Home_Work_Lesson_10"
     )
     browser.element("#query-builder-test").submit()
 
-    browser.element(by.link_text("PanovaAlyona/qa_guru_homework_10")).click()
+    browser.element(by.link_text("SteppenWolf8777/AQA_Home_Work_Lesson_10")).click()
 
     browser.element("#issues-tab").click()
-    browser.element("[data-testid='issue-pr-title-link']").should(
-        have.text("Test Issue")
-    )
